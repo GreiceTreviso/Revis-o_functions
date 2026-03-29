@@ -7,36 +7,68 @@ import { menorMaior } from "./exe5.js";
 import { Cardapio } from "./exe7.js";
 import { Tabuada } from "./exe8.js";
 import { vetor } from "./exe9.js";
+import express from "express";
+
+//criando a constante (servidor) para startar a function express
+const app=express()
+
+//criando a rota para todos abaixo
 
 // exe1 declaração variavel
-let idade = mostrarIdade(18)
-console.log(idade)
+app.get('/one',(req, res)=> { //app.get cria rota para executar function quando acessar link pelo nav
+let idade = mostrarIdade(18)  //"/one" o caminho. req requisição oq o va envia pro servidor e res a resposta 
+res.send(idade)   //res.send diz pro servidor envia pro nav
+})
+
 
 // exe2 aritiméticos
+app.get('/two',(req, res)=> { 
 let soma = somaDavid( 12, 23 )
-console.log(soma)
+res.send(soma)
+})
+
 
 //exe3 operadores relacionais
+app.get('/three',(req, res)=> {
 let passaword = senha(346)
-console.log(passaword)
+res.send(passaword)
+})
+
 
 // exe4. operadores de codigos
+app.get('/four', (req, res)=>{
 let resMedia = media (7,8)
-console.log(resMedia)
+res.send(resMedia)
+})
+
 
 //exe5 estrutura if/else
+app.get('/five',(req, res)=>{
 let Maior = menorMaior (39445,4334)
-console.log(Maior)
+res.send(Maior)
+})
 
 //exe7 estrutura case
+app.get('/six',(req, res)=>{
 let valor = Cardapio("carneHumana")
-console.log(valor)
+res.send(valor)
+})
+
 
 //exe8 laço repetição
+app.get('/seven',(req, res)=>{
 let resultado = Tabuada(5)
-console.log(resultado)
+res.send(resultado)
+})
+
 
 //exe9 vetor
-let numeros = vetor()
-console.log(numeros)
+app.get('/eight',(req,res)=>{
+    let numeros = vetor()
+res.send(numeros)
+})
 
+
+app.listen(3000, () => { //app.listen liga o servidor e 3000 é o numero dele
+  console.log('Server is running on http://localhost:3000') //uma mensagem pra saber que o servidor iniciou
+})
