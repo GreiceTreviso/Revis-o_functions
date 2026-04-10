@@ -15,16 +15,27 @@ const app=express()
 //criando a rota para todos abaixo
 
 // exe1 declaração variavel
-app.get('/one',(req, res)=> { //app.get cria rota para executar function quando acessar link pelo nav
-let idade = mostrarIdade(18)  //"/one" o caminho. req requisição oq o va envia pro servidor e res a resposta 
-res.send(idade)   //res.send diz pro servidor envia pro nav, o req pede.
+app.get('/mostrarIdade/:n1',(req, res)=> { //app.get cria rota para executar function quando acessar link pelo nav
+let {n1} = req.params
+let idade = mostrarIdade(n1)
+res.send(idade)   
 }) 
+
+//// params
+//  URL - localhost:3000/somar/30/60
+//app.get('/somar/:n1/:n2', (req, res) => {
+ // let {n1, n2} = req.params
+ // let resultado = somar(n1, n2)
+  //res.send(resultado)
+//})
+
 
 
 // exe2 aritiméticos
-app.get('/two',(req, res)=> { 
-let soma = somaDavid( 12, 23 )
-res.send(soma)
+app.get('/two/:n1/:n2',(req, res)=> { 
+let {n1, n2} = req.params
+let soma = somaDavid( n1, n2 )
+res.send(soma) 
 })
 
 
