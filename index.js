@@ -4,9 +4,9 @@ import { somaDavid } from "./exe2.js";
 import { senha } from "./exe3.js";
 import { media } from "./exe4.js";
 import { menorMaior } from "./exe5.js";
-import { Cardapio } from "./exe7.js";
-import { Tabuada } from "./exe8.js";
-import { vetor } from "./exe9.js";
+import { Cardapio } from "./exe6.js";
+import { Tabuada } from "./exe7.js";
+import { vetor } from "./exe8.js";
 import express from "express";
 
 //criando a constante (servidor) para startar a function express
@@ -17,8 +17,8 @@ const app=express()
 // exe1 declaração variavel
 app.get('/one',(req, res)=> { //app.get cria rota para executar function quando acessar link pelo nav
 let idade = mostrarIdade(18)  //"/one" o caminho. req requisição oq o va envia pro servidor e res a resposta 
-res.send(idade)   //res.send diz pro servidor envia pro nav
-})
+res.send(idade)   //res.send diz pro servidor envia pro nav, o req pede.
+}) 
 
 
 // exe2 aritiméticos
@@ -53,7 +53,7 @@ app.get('/six',(req, res)=>{
 let valor = Cardapio("carneHumana")
 res.send(valor)
 })
-
+ 
 
 //exe8 laço repetição
 app.get('/seven',(req, res)=>{
