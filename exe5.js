@@ -1,11 +1,12 @@
-function menorMaior (n1,n2) {
-    let res; 
-
+function menorMaior (n1,n2) { //atualizei function 
     if ( n1 > n2) {
-        res = "maior"
-    } else {
-        res = "menor"
+     return "maior"
     } 
-    return res; 
+    else if (n1 < n2) {
+        return "menor"
+    } 
+    else {
+        return "iguais"
+    }
 }
     export {menorMaior}

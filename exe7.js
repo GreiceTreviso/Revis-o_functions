@@ -1,7 +1,7 @@
-function Tabuada ( n1) {
+function Tabuada (n) {
     let res = ""
     for (let i=1; i<=10; i++) {
-    res += n1 + "x" +i+ "=" + (n1 * i)  +  "\n"
+    res += n + "x" +i+ "=" + (n * i)  +  "\n"
     }
     return res;
 }

@@ -1,12 +1,9 @@
-function senha (){
-    let senha 
-    let res
-
-    if (senha == 345 ) {
-        res = "correto, liberado"
+function senha (n1){ //atualizei essa function, melhorei ela.
+    if (n1 == 345 ) {
+        n1 = "correto, liberado"
     }
-     else if ( senha != 345) { //tem que por else if para usar os ()
-        res = "banido" }
-return res
+     else if ( n1 != 345) { //tem que por else if para usar os ()
+        n1 = "banido" }
+return n1
 }
 export {senha}

@@ -1,17 +1,17 @@
-function Cardapio (carnes) {
+function Cardapio (picanha, humano, frango) {
     let valor
-   switch (carnes) {
+   switch (picanha, humano, frango) {
 
-    case "carneHumana": valor = 120000
+    case humano: valor = 120000
     break
  
-    case "picanha": valor = 250
+    case picanha: valor = 250
     break
 
-    case "frango": valor = 50
+    case frango: valor = 50
     break
      
-    default: valor = "não tem"
+    default: valor ="não tem"
  }
  return valor
 } 

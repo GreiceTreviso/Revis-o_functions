@@ -1,5 +1,5 @@
-function vetor ( ){
-    let numeros = [12,34,56,786,245];
-  return numeros 
+function vetor (n1,n2,n3){
+    let res = [n1,n2,n3];
+  return res
 }
-export {vetor}
+export {vetor} 
